@@ -14,6 +14,65 @@
       background: #f5f5f5;
       color: #111827;
     }
+html {
+    scroll-behavior: smooth;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px 0;
+    margin-bottom: 16px;
+  }
+
+  .navbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .nav-brand {
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    font-size: 14px;
+  }
+
+  .nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 999px;
+  }
+
+  .nav-links a:hover {
+    background: #eff6ff;
+    color: #1d4ed8;
+  }
+
+  @media (max-width: 640px) {
+    .navbar-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav-links {
+      width: 100%;
+    }
+  }
+    
     h1 {
       margin-bottom: 8px;
     }
@@ -123,6 +182,19 @@
   </style>
 </head>
 <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="nav-brand">WB Видеообложки</div>
+      <div class="nav-links">
+        <a href="#examples">Примеры</a>
+        <a href="#benefits">Зачем селлеру</a>
+        <a href="#process">Как работаем</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+  </div>
+  
    <div class="hero">
     <h1>Видеообложки для Wildberries, которые повышают CTR карточки товара</h1>
     <p class="subtitle">
@@ -148,7 +220,7 @@
  <div class="grid">
     <!-- видео 1 -->
     <div class="item">
-      <video src="video1.mp4" muted loop playsinline controls></video>
+      <video src="video1.mp4"   muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">Детские товары — анимация персонажа</div>
       <div class="caption-text">
        10 секунд: мягкая, неспешная анимация плюшевого героя на первом фото. Сразу считывается «для детей» и цепляет внимание родителей в выдаче WB. Идеально, чтобы тестировать разные обещания в A/B-тестах
@@ -157,7 +229,7 @@
 
     <!-- видео 2 -->
     <div class="item">
-      <video src="video2.mp4" muted loop playsinline controls></video>
+      <video src="video2.mp4" muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">Зоотовары — анимация собаки и кошки</div>
       <div class="caption-text">
        5 секунд: ожившие собака и кошка на картинке. кошка машет лапой. Полностью сохраненный текст карточки. Покупатель перестает скролить лентки и оставнавливает свое внимание именно на этой карточке.
@@ -166,7 +238,7 @@
    
    <!-- видео 3 -->
     <div class="item">
-      <video src="video3.mp4" muted loop playsinline controls></video>
+      <video src="video3.mp4" muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">Бумажные стаканы — появление ёжика</div>
       <div class="caption-text">
         5 секунд: в кружку наливается горячий кофе, поднимается пар. В кадр забегает ёжик, нюхает кофе и убегает. Видеообложка привлекает внимание на фоне всех статичных карточек.
@@ -176,7 +248,7 @@
 
     <!-- видео 4 -->
     <div class="item">
-      <video src="video4.mp4" muted loop playsinline controls></video>
+      <video src="video4.mp4" muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">БАДы — анимация товара</div>
       <div class="caption-text">
        5 секунд: плавные покачивания баночки, падающий снег и анимация капсул. Чувство нового года и полезности товара сразу останавливает покупателя при "прокрутке" выдачи товаров.
@@ -185,7 +257,7 @@
 
     <!-- видео 5 -->
     <div class="item">
-      <video src="video5.mp4" muted loop playsinline controls></video>
+      <video src="video5.mp4" muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">Одежда — движенеи модели</div>
       <div class="caption-text">
         5 секунд: плавное движение модели и "мини-карточки", аккуратные надписи. Видеообложка показывает ощущение вещи, а не просто фото на белом фоне.
@@ -194,7 +266,7 @@
 
     <!-- видео 6 -->
     <div class="item">
-      <video src="video6.mp4" muted loop playsinline controls></video>
+      <video src="video6.mp4" muted  loop  playsinline  controls  controlsList="nodownload"  oncontextmenu="return false"></video>
       <div class="caption-title">Фитнес — демонстрация товара</div>
       <div class="caption-text">
         5: планвное вращение товара, крупный текст с УТП, фокус на ключевой особенности товара. Выгодно отличается от остальных статичных карточек похожего товара. Конкуренты плачут
@@ -247,10 +319,10 @@
     <ul>
       <li>
         <b>1. Вы присылаете карточку и запрос</b><br>
-        Ссылка на товар WB + пару фраз о желаемом сценарии анимации (при необходимости). Описываете какое количество карточек товара желаете "оживить".
+        Ссылка на товар WB + пару фраз о желаемом сценарии анимации и длительности видео (при необходимости). Описываете какое количество карточек товара желаете "оживить".
       </li>
       <li>
-        <b>2. Я предлагаю 1–2 сценария 5–10 секундного видео</b><br>
+        <b>2. Я предлагаю 1–2 сценария 5 или 10 секундного видео</b><br>
         Описываю сценарий анимации и рекомендуемую длительность. Рассматриваю возможность иполнения вашего сценария, даю рекомендации.
       </li>
       <li>
@@ -264,39 +336,63 @@
     </ul>
   </div>
 
-  <!-- Тарифы -->
+    <!-- Тарифы -->
   <div class="section" id="pricing">
-    <h2>Тарифы на видеообложки</h2>
-    <ul>
-      <li>
-        <b>Видеообложка до 5 секунд — 5&nbsp;000 ₽</b><br>
-        Короткий акцент на анимации товара или персонажа (элемента) с карточки. Подходит для простых и понятных товаров.
-      </li>
-      <li>
-        <b>Видеообложка до 10 секунд — 7&nbsp;000 ₽</b><br>
-        Можно показать мини-сцену: внезапное появление элементов, использование товара, до/после, несколько ракурсов и текст с УТП.
-      </li>
+    <h2>Тарифы на видеообложки (за 1 карточку товара)</h2>
+
+    <div class="grid">
+      <div class="item">
+        <h3>DEMO — 3&nbsp;000 ₽</h3>
+        <p class="caption-text"><b>«Готово здесь и сейчас»</b></p>
+        <ul>
+          <li>1 демо-видеообложка для карточки WB;</li>
+          <li>без детального согласования сценария;</li>
+          <li>подходит, чтобы быстро увидеть формат и результат;</li>
+          <li>ориентировочное время готовности: 1–2 часа после обращения.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>STANDARD — 5&nbsp;000 ₽</h3>
+        <p class="caption-text"><b>«Под твой сценарий»</b></p>
+        <ul>
+          <li>1 видеообложка длительностью до 5 секунд;</li>
+          <li>сценарий и акценты согласуем заранее;</li>
+          <li>статичная камера, аккуратная композиция;</li>
+          <li>оживление ключевого элемента карточки (товар, персонаж и т.п.).</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>PRO — 7&nbsp;000 ₽</h3>
+        <p class="caption-text"><b>«Два варианта, свободный выбор»</b></p>
+        <ul>
+          <li>2 версии видеообложки длительностью до 10 секунд;</li>
+          <li>сценарий: ваш вариант + мой предложенный;</li>
+          <li>можно выбрать лучший ролик под основную обложку;</li>
+          <li>идеально подходит для A/B-тестов и продвижения карточки.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      Стоимость указана за <b>одну карточку товара</b>. 
       <li>
         <b>Отличные скидки</b> при заказе анимации нескольких карточек (скидка за объем)
-      </li>
-      <li>
-        <b>Срок производства — обычно 1–2 рабочих дня на ролик (в зависимости от сложности сценария).
-      </li>
-      <li>
-        По запросу можно сделать <b>несколько вариантов под A/B-тест</b> главной обложки в выдаче WB.
-      </li>
-       
-    </ul>
-  </div>
-  
-
-  <div class="section">
-    <h2>Связаться и заказать видеообложку</h2>
-    <p><b>Написать в Telegram:<b> @wbvideoYaroslav</p> <a href="https://t.me/wbvideoYaroslav"
-    <p class="footer-note">
-    <p><b>В сообщении можете сразу прислать ссылку на карточку и написать:<b>
-      «Нужна видеообложка для Wildberries, 5–10 секунд, хочу увеличить CTR и отстроиться от конкурентов. Планирую анимировать 10 карточек»
+      </li>.
     </p>
   </div>
+
+    <!-- Контакты -->
+  <div class="section" id="contact">
+    <h2>Связаться и заказать видеообложку</h2>
+    <p><b>Написать в Telegram:</b> @wbvideoYaroslav</p>
+    <p>
+      <b>В сообщении можете сразу прислать ссылку на карточку и написать:</b><br>
+      «Нужна видеообложка для Wildberries, 5–10 секунд, хочу увеличить CTR и отстроиться от конкурентов. 
+      Планирую анимировать 10 карточек».
+    </p>
+  </div>  
+  
 </body>
 </html>
