@@ -52,11 +52,25 @@ html {
     position: relative;
   }
 
-  .nav-brand {
-    font-weight: 700;
-    font-size: 16px;
-    white-space: nowrap;
-  }
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  color: #111827;
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  opacity: 0.8;
+}
+
+.nav-logo {
+  font-size: 18px;
+  line-height: 1;
+}
 
   .nav-links {
     display: flex;
@@ -244,7 +258,11 @@ html {
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="nav-brand">WB Видеообложки</div>
+  <a id="top"></a>
+  <a href="#top" class="nav-brand">
+  <span class="nav-logo">🎥</span>
+  <span>WB Видеообложки</span>
+  </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label">
