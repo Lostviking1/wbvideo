@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: aiwbvideo.ru
+Sitemap: https://aiwbvideo.ru/sitemap.xml
