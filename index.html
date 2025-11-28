@@ -41,17 +41,17 @@ html {
     border-bottom: 1px solid #e5e7eb;
   }
 
-  .navbar-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    position: relative;
-  }
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
 
+/* Логотип/название слева, всё остальное сдвигается вправо */
 .nav-brand {
   display: inline-flex;
   align-items: center;
@@ -61,10 +61,11 @@ html {
   white-space: nowrap;
   color: #111827;
   text-decoration: none;
+  margin-right: auto; /* вот это прибивает бренд к левой стороне */
 }
 
 .nav-brand:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .nav-logo {
@@ -256,13 +257,12 @@ html {
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="navbar-inner">
-  <a id="top"></a>
-  <a href="#top" class="nav-brand">
-  <span class="nav-logo">🎥</span>
-  <span>WB Видеообложки</span>
-  </a>
+<div class="navbar">
+  <div class="navbar-inner">
+    <a href="#top" class="nav-brand">
+      <span class="nav-logo">🎥</span>
+      <span>WB Видеообложки</span>
+    </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label">
@@ -296,7 +296,7 @@ html {
 <noscript><div><img src="https://mc.yandex.ru/watch/105547966" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
   
-  <div class="hero">
+  <div class="hero" id="top">
     <h1>Видеообложки для Wildberries: ии анимация карточки товара для роста CTR</h1>
     <p class="subtitle">
       Делаю короткие <b>5–10 секундные видео-обложки</b> для первого фото карточки товара. Автозапуск такого видео останавливает у покупателя скролл ленты, <b>увеличивая кликабельность (CTR)</b> и превращая показы в заказы.
